@@ -76,7 +76,7 @@ public class DBHelper extends SQLiteOpenHelper  {
     	insertRoom("Office 3-14", "Dawn Koh Chin-Ing", 3,14,2,5,344,480);
     	insertRoom("Office 3-15", "Casey Hammond", 3,15,2,5,267.6,480);
     	insertRoom("Office 3-16", "", 3,16,2,5,344,744);
-    	insertRoom("Office 3-17", "Lui Siu Hang Simon", 3,17,2,5,432,344);
+    	insertRoom("Office 3-17", "Lui Siu Hang Simon", 3,17,2,5,432,744);
     	insertRoom("Office 3-18", "", 3,18,2,4,80,744);
     	insertRoom("Office 3-19", "James Rowlins", 3,19,2,4,160,744);
     	insertRoom("Office 3-20", "Zhu Yajuan", 3,20,2,4,252,744);

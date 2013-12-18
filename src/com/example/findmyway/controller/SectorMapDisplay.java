@@ -48,8 +48,8 @@ public class SectorMapDisplay extends Activity {
 		getMapID();
 		
 		ImageView pointer = (ImageView) findViewById(R.id.pointer);
-		pointer.setX((float)searchResult.getX());
-		pointer.setY((float)searchResult.getY());
+		pointer.setX((float)(searchResult.getX()*0.9524-35));
+		pointer.setY((float)(searchResult.getY()*0.9525-80));
 		
 		ImageView sectorMap = (ImageView) findViewById(R.id.sector_map);
 		sectorMap.setBackgroundResource(sectorMapID);
