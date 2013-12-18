@@ -67,10 +67,10 @@ public class MainActivity extends Activity {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
-				if ( filterEditor.getText().toString().isEmpty() )  //set visibility of listView
+				/*if ( filterEditor.getText().toString().isEmpty() )  //set visibility of listView
 					listView.setVisibility(View.INVISIBLE);
 				else
-					listView.setVisibility(View.VISIBLE);
+					listView.setVisibility(View.VISIBLE);*/
 				
 				updateText();
 			}

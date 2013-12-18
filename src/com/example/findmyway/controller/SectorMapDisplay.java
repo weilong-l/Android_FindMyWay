@@ -26,13 +26,8 @@ public class SectorMapDisplay extends Activity {
 	private static int sector = 1;
 	private static int level = 2;
 	private static SearchResult searchResult;
-
-/*	public final static String LEVEL = "mapdisplay.findmyway.LEVEL";
-    public final static String ZONE = "mapdisplay.findmyway.ZONE";
-    public final static String SECTOR = "mapdisplay.findmyway.SECTOR";
-    public final static String X = "mapdisplay.findmyway.X";
-    public final static String Y = "mapdisplay.findmyway.Y";*/
-    
+	private static double scaleFactorX = 1;
+	private static double scaleFactorY = 1;
     
 	@SuppressLint("NewApi")
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +43,11 @@ public class SectorMapDisplay extends Activity {
 		getMapID();
 		
 		ImageView pointer = (ImageView) findViewById(R.id.pointer);
-		pointer.setX((float)(searchResult.getX()*0.9524-35));
-		pointer.setY((float)(searchResult.getY()*0.9525-80));
+		scaleFactorX = getWindowManager().getDefaultDisplay().getWidth()/480.0;
+		scaleFactorY = getWindowManager().getDefaultDisplay().getHeight()/800.0;
+		
+		pointer.setX((float)((searchResult.getX()*0.9524-35)*scaleFactorX));
+		pointer.setY((float)((searchResult.getY()*0.9525-80)*scaleFactorY));
 		
 		ImageView sectorMap = (ImageView) findViewById(R.id.sector_map);
 		sectorMap.setBackgroundResource(sectorMapID);

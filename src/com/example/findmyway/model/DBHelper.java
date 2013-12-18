@@ -177,7 +177,7 @@ public class DBHelper extends SQLiteOpenHelper  {
     	insertRoom("Office 4-43", "Aditya Mathur", 4,43,1,2,140,480);
     	insertRoom("Office 4-44", "Saif Benjaafar", 4,44,1,3,320,480);
     	insertRoom("Meeting Room 4-3", "", 4,3,1,4,184,480);
-    	insertRoom("Meeting Room 4-4", "", 4,4,1,4,100,480);
+    	insertRoom("Meeting Room 4-4", "", 4,4,1,4,350,480);
     	insertRoom("Meeting Room 4-5", "", 4,5,1,3,440,480);
     	insertRoom("Meeting Room 4-6", "", 4,6,3,1,204,260);
     	insertRoom("Office 4-45", "Yang Shengyuan", 4,45,3,2,40,420);

@@ -12,10 +12,10 @@ public class Search {
 	private String ProfessorName=null;
 	
 	//constant regular expressions
-	private static final String LR="([0-9]\\s*-\\s*[0-9][0-9]?)";
-	private static final String LEVEL="(l(evel)?\\s*[0-9])";
-	private static final String ROOM="(ro{0,2}m?\\s*[0-9][0-9]?)";
-	private static final String PROFNAME="(((prof)|(professor)|(leturer)|(dr))?"+"\\s*[a-z]+)";
+	private static final String LR="([0-9]\\s*-\\s*[0-9][0-9]?)\\s*";
+	private static final String LEVEL="(l(evel)?\\s*[0-9])\\s*";
+	private static final String ROOM="(ro{0,2}m?\\s*[0-9][0-9]?\\s*)";
+	private static final String PROFNAME="(((prof)|(professor)|(leturer)|(dr))?"+"\\s*[a-z]+\\s*)";
 	private static final String INPUTREGEX=LR+"|"+LEVEL+"|"+ROOM+"|"+PROFNAME;
 	
 	/**
@@ -50,7 +50,7 @@ public class Search {
 	            continue;
 			 }
 			 if(matcher.group(5) != null){
-			    ProfessorName=matcher.group(5).replaceAll("((prof)|(professor)|(lecturer)|(dr))"+"\\s*", "");
+			    ProfessorName=matcher.group(5).replaceAll("((professor)|(prof)|(lecturer)|(dr))"+"\\s*", "");
 	            continue;
 			 }
 	   	}
