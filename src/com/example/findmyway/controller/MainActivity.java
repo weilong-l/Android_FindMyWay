@@ -153,6 +153,9 @@ public class MainActivity extends Activity {
 			//searchResult = new SearchResult();
 			for (int i=0; i < numCol; i++){
 				switch (i) {
+				case 0:
+					searchResult.setRoomName(cres.getString(i));
+					break;
 				case 2:
 					searchResult.setLevel(Integer.parseInt(cres.getString(i)));
 					break;

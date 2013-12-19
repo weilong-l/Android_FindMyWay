@@ -58,9 +58,9 @@ public class SectorMapDisplay extends Activity {
 		button.setBackgroundResource(zoneMapID);
 		
 		TextView levelTextView = (TextView) findViewById(R.id.levelText);
-		levelTextView.setText("Level "+level);
+		levelTextView.setText("Level "+level + "," + zone.name());
 		TextView sectorTextView = (TextView) findViewById(R.id.sectorText);
-		sectorTextView.setText(zone.name());
+		sectorTextView.setText(searchResult.getRoomName());
 	}
 
 	/**

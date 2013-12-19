@@ -11,9 +11,18 @@ public class SearchResult implements Serializable{
 	private Zone zone;
 	private int level;
 	private int sector;
+	private String roomName;
 	private double x;
 	private double y;
 
+	public String getRoomName() {
+		return roomName;
+	}
+
+	public void setRoomName(String roomName) {
+		this.roomName = roomName;
+	}
+	
 	public Zone getZone() {
 		return zone;
 	}
@@ -55,6 +64,7 @@ public class SearchResult implements Serializable{
 	}
 
 	public SearchResult() {
+		roomName = "";
 		zone = Zone.EAST;
 		level = 0;
 		sector = 0;
